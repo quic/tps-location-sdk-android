@@ -216,6 +216,7 @@ If you want to write the log file to external storage, make sure to obtain the `
 ### 5.13
 
 * SDK released as a standalone library (AAR)
+* XPS v2 is now the default mode
 * Location tracking and smoothing in XPS v2
 * Added indoor-specific attributes in the API
 
