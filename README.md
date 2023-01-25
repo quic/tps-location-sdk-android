@@ -213,6 +213,13 @@ If you want to write the log file to external storage, make sure to obtain the `
 
 ## Changelog
 
+### 5.14
+
+* On-device cell-based positioning using tiles
+* Improved on-device Wi-Fi positioning with cell corroboration
+* Fixed the Z-axis GPS-only use case
+* Fixed a regression where a stale GPS could be reported in XPS v2
+
 ### 5.13
 
 * SDK released as a standalone library (AAR)
