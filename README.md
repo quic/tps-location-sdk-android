@@ -213,12 +213,38 @@ If you want to write the log file to external storage, make sure to obtain the `
 
 ## Changelog
 
-### 5.14
+### 5.14.8
+
+* Fixed a critical error happening after a cell tile update
+
+### 5.14.7
+
+* Location provider maintenance release
+
+### 5.14.4
+
+* Optimized wake lock usage in XPS v2
+
+### 5.14.3
+
+* Optimized handling of cached cell scan data
+* Improved performance in Wi-Fi/Cell only mode
+* Extended configuration capabilities
+
+### 5.14.2
+
+* Location provider release with SDK 5.14 features
+
+### 5.14.1
+
+* Fixed a regression where a stale GPS could be reported in XPS v2
+* Fixed the Z-axis GPS-only use case
+* Added a cache for on-device neighbor cell lookup
+
+### 5.14.0
 
 * On-device cell-based positioning using tiles
 * Improved on-device Wi-Fi positioning with cell corroboration
-* Fixed the Z-axis GPS-only use case
-* Fixed a regression where a stale GPS could be reported in XPS v2
 
 ### 5.13
 
