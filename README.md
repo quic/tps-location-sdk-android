@@ -213,6 +213,26 @@ If you want to write the log file to external storage, make sure to obtain the `
 
 ## Changelog
 
+### 5.15.3
+
+* Updated on-device Wi-Fi positioning algorithm
+* Added support for passive scanning mode
+* Additional configuration options for GNSS fix acquisition
+* Street address and timezome lookup support in XPS v2
+* Minor power optimization in location provider
+
+### 5.14.11
+
+* Location provider support for customer-specific extention added in 5.4
+
+### 5.14.10
+
+* Fixed handling a rare scenario when telephony service dies
+
+### 5.14.9
+
+* Fixed handling GPS location age in Z-axis
+
 ### 5.14.8
 
 * Fixed a critical error happening after a cell tile update
