@@ -213,6 +213,15 @@ If you want to write the log file to external storage, make sure to obtain the `
 
 ## Changelog
 
+### 5.16.4
+
+* Introduced Wi-Fi RTT positioning
+* Added support for GeoFencing API in XPS v2
+* Added support for an additional token-based registration model in location provider
+* Improved TTFF in tiling-only mode
+* Improved performance in XPS tracking mode
+* Increased the default Wi-Fi scanning rate when connected to an AP
+
 ### 5.15.3
 
 * Updated on-device Wi-Fi positioning algorithm
@@ -220,6 +229,17 @@ If you want to write the log file to external storage, make sure to obtain the `
 * Additional configuration options for GNSS fix acquisition
 * Street address and timezome lookup support in XPS v2
 * Minor power optimization in location provider
+* Removed legacy XPS v1 location engine
+* Deprecated Tune Location API
+* Deprecated Certified Location API
+
+### 5.14.13
+
+* Fixed a stability issue when running in 5G/NR cellular mode
+
+### 5.14.12
+
+* Fixed handling GPS locations with no satellite info in Z-axis
 
 ### 5.14.11
 
