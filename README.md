@@ -215,239 +215,239 @@ If you want to write the log file to external storage, make sure to obtain the `
 
 ### 5.16.4
 
-* Introduced Wi-Fi RTT positioning
-* Added support for GeoFencing API in XPS v2
-* Added support for an additional token-based registration model in location provider
-* Improved TTFF in tiling-only mode
-* Improved performance in XPS tracking mode
-* Increased the default Wi-Fi scanning rate when connected to an AP
+* ![feat] ![all] Introduced Wi-Fi RTT positioning
+* ![feat] ![all] Added support for GeoFencing API in XPS v2
+* ![feat] ![provider] Added support for an additional token-based registration model
+* ![impr] ![all] Improved TTFF in tiling-only mode
+* ![impr] ![all] Improved performance in XPS tracking mode
+* ![opt] ![all] Increased the default Wi-Fi scanning rate when connected to an AP
 
 ### 5.15.3
 
-* Updated on-device Wi-Fi positioning algorithm
-* Added support for passive scanning mode
-* Additional configuration options for GNSS fix acquisition
-* Street address and timezome lookup support in XPS v2
-* Minor power optimization in location provider
-* Removed legacy XPS v1 location engine
-* Deprecated Tune Location API
-* Deprecated Certified Location API
+* ![impr] ![all] Updated on-device Wi-Fi positioning algorithm
+* ![impr] ![all] Additional configuration options for GNSS fix acquisition
+* ![feat] ![all] Added support for passive scanning mode
+* ![feat] ![sdk] Street address and timezome lookup support in XPS v2
+* ![opt] ![provider] Minor power optimization in location provider
+* ![depr] ![all] Removed legacy XPS v1 location engine
+* ![depr] ![sdk] Deprecated Tune Location API
+* ![depr] ![sdk] Deprecated Certified Location API
 
 ### 5.14.13
 
-* Fixed a stability issue when running in 5G/NR cellular mode
+* ![fix] ![all] Fixed a stability issue when running in 5G/NR cellular mode
 
 ### 5.14.12
 
-* Fixed handling GPS locations with no satellite info in Z-axis
+* ![fix] ![sdk] Fixed handling GPS locations with no satellite info in Z-axis
 
 ### 5.14.11
 
-* Location provider support for customer-specific extention added in 5.4
+* ![feat] ![provider] Location provider support for customer-specific extention added in 5.4
 
 ### 5.14.10
 
-* Fixed handling a rare scenario when telephony service dies
+* ![fix] ![all] Fixed handling a rare scenario when telephony service dies
 
 ### 5.14.9
 
-* Fixed handling GPS location age in Z-axis
+* ![fix] ![sdk] Fixed handling GPS location age in Z-axis
 
 ### 5.14.8
 
-* Fixed a critical error happening after a cell tile update
+* ![fix] ![all] Fixed a critical error happening after a cell tile update
 
 ### 5.14.7
 
-* Location provider maintenance release
+* ![fix] ![provider] Location provider maintenance release
 
 ### 5.14.4
 
-* Optimized wake lock usage in XPS v2
+* ![opt] ![all] Optimized wake lock usage in XPS v2
 
 ### 5.14.3
 
-* Optimized handling of cached cell scan data
-* Improved performance in Wi-Fi/Cell only mode
-* Extended configuration capabilities
+* ![opt] ![all] Optimized handling of cached cell scan data
+* ![impr] ![all] Improved performance in Wi-Fi/Cell only mode
+* ![feat] ![all] Extended configuration capabilities
 
 ### 5.14.2
 
-* Location provider release with SDK 5.14 features
+* ![feat] ![provider] Location provider release with SDK 5.14 features
 
 ### 5.14.1
 
-* Fixed a regression where a stale GPS could be reported in XPS v2
-* Fixed the Z-axis GPS-only use case
-* Added a cache for on-device neighbor cell lookup
+* ![fix] ![sdk] Fixed a regression where a stale GPS could be reported in XPS v2
+* ![fix] ![sdk] Fixed the Z-axis GPS-only use case
+* ![opt] ![all] Added a cache for on-device neighbor cell lookup
 
 ### 5.14.0
 
-* On-device cell-based positioning using tiles
-* Improved on-device Wi-Fi positioning with cell corroboration
+* ![feat] ![all] On-device cell-based positioning using tiles
+* ![feat] ![all] Improved on-device Wi-Fi positioning with cell corroboration
 
 ### 5.13
 
-* SDK released as a standalone library (AAR)
-* XPS v2 is now the default mode
-* Location tracking and smoothing in XPS v2
-* Added indoor-specific attributes in the API
+* ![feat] ![sdk] SDK released as a standalone library (AAR)
+* ![feat] ![all] XPS v2 is now the default mode
+* ![feat] ![all] Location tracking and smoothing in XPS v2
+* ![feat] ![all] Added indoor-specific attributes in the API
 
 ### 5.12
 
-* Location provider released as a generic build (APK)
+* ![feat] ![provider] Location provider released as a generic build (APK)
 
 ### 5.11
 
-* Elevation determination based on barometric pressure (Z-axis)
+* ![feat] ![sdk] Elevation determination based on barometric pressure (Z-axis)
 
 ### 5.10
 
-* Added support for emergency mode in Android 10+ for location provider releases
-* Fixed cell scanning on Android 10+
+* ![feat] ![provider] Added support for emergency mode in Android 10+ for location provider releases
+* ![fix] ![all] Fixed cell scanning on Android 10+
 
 ### 5.9
 
-* Improvements in XPS v2 performance
-* Extended XPS v2 configuration and logging capabilities
-* Added permissive mode support for custom Android integrations
-* Fixed performance of cell location cache in legacy Android versions
+* ![impr] ![sdk] Improvements in XPS v2 performance
+* ![feat] ![sdk] Extended XPS v2 configuration and logging capabilities
+* ![feat] ![sdk] Added permissive mode support for custom Android integrations
+* ![fix] ![sdk] Fixed performance of cell location cache in legacy Android versions
 
 ### 5.8
 
-* Background mode (long period) support in XPS v2
-* Location setting check in XPS v2
-* Improvements in token-based registration
-* Added a workaround for reference leak in AlarmManager API
+* ![feat] ![sdk] Background mode (long period) support in XPS v2
+* ![feat] ![sdk] Location setting check in XPS v2
+* ![impr] ![sdk] Improvements in token-based registration
+* ![fix] ![sdk] Added a workaround for reference leak in AlarmManager API
 
 ### 5.7
 
-* New location engine - "XPS v2"
-* Added support for using custom network connection
-* Improved location cache performance
+* ![feat] ![sdk] New location engine - "XPS v2"
+* ![feat] ![sdk] Added support for using custom network connection
+* ![opt] ![all] Improved location cache performance
 
 ### 5.6
 
-* Updated the location setting check for Android 9+
+* ![feat] ![sdk] Updated the location setting check for Android 9+
 
 ### 5.5.1
 
-* Fixed the Opt-In mechanism in location provider
+* ![fix] ![provider] Fixed the Opt-In mechanism in location provider
 
 ### 5.5.0
 
-* Core support for token-based registration (for location provider releases)
-* Additional flexibility in the location cache configuration
+* ![feat] ![provider] Core support for token-based registration (for location provider releases)
+* ![feat] ![all] Additional flexibility in the location cache configuration
 
 ### 5.4
 
-* Extended capabilities for a customer-specific application
+* ![feat] ![sdk] Extended capabilities for a customer-specific application
 
 ### 5.3
 
-* WPS positioning improvements for the underground subway use case
+* ![impr] ![all] WPS positioning improvements for the underground subway use case
 
 ### 5.2
 
-* Optimized external dependencies and components in the manifest
-* Optimized performance of Wi-Fi scanning code
-* Fixed cell scan timestamps on Android 10+
-* Initial BLE support in the SDK core
+* ![opt] ![sdk] Optimized external dependencies and components in the manifest
+* ![opt] ![all] Optimized performance of Wi-Fi scanning code
+* ![opt] ![all] Fixed cell scan timestamps on Android 10+
+* ![feat] ![sdk] Initial BLE support in the SDK core
 
 ### 5.0.2
 
-* Fixed a rare deadlock condition
+* ![fix] ![all] Fixed a rare deadlock condition
 
 ### 5.0.0
 
-* Migrated SDK documentation to GitHub
-* Created the Quick Start guide
-* Distribution via Maven repository
-* Added support for vertical positioning error
-* Improved security for tile downloads
-* Tiling directory is now created by the SDK if it didn't exist
-* Minor optimization for Lite Doze mode
+* ![doc] Migrated SDK documentation to GitHub
+* ![doc] Created the Quick Start guide
+* ![feat] ![sdk] Distribution via Maven repository
+* ![feat] ![sdk] Added support for vertical positioning error
+* ![impr] ![all] Improved security for tile downloads
+* ![impr] ![sdk] Tiling directory is now created by the SDK if it didn't exist
+* ![opt] ![all] Minor optimization for Lite Doze mode
 
 ### 4.10.x
 
-* Internal improvements required for location provider releases
+* ![impr] ![provider] Internal improvements required for location provider releases
 
 ### 4.9.8
 
-* Additional geofencing improvements
+* ![impr] ![sdk] Additional geofencing improvements
 
 ### 4.9.7
 
-* Added compatibility with Wi-Fi scan throttling in Android 8
-* Improvements for Android Doze mode
-* Improved geofencing performance
+* ![feat] ![sdk] Added compatibility with Wi-Fi scan throttling in Android 8
+* ![impr] ![sdk] Improvements for Android Doze mode
+* ![impr] ![sdk] Improved geofencing performance
 
 ### 4.9.6
 
-* Added compatibility with Lite Doze mode in Android 7
+* ![feat] ![sdk] Added compatibility with Lite Doze mode in Android 7
 
 ### 4.9.5
 
-* Added client back-off mechanism
+* ![feat] ![all] Added client back-off mechanism
 
 ### 4.9.4
 
-* Extended the street address lookup with a new geospatial layer which represents a smaller township or municipal names found within a larger city region. This layer is sourced from open-source data without modification and more closely aligns with general jurisdictional and town boundaries.
+* ![impr] ![sdk] Improvements in street address lookup
 
 ### 4.9.3
 
-* Improved general CPU utilization and power consumption
-* Optimized network load and power consumption in tiling mode
-* Improved geofencing in UMTS and LTE networks
+* ![opt] ![all] Improved general CPU utilization and power consumption
+* ![opt] ![all] Optimized network load and power consumption in tiling mode
+* ![opt] ![sdk] Improved geofencing in UMTS and LTE networks
 
 ### 4.9.2
 
-* Added a check to respect the system-wide location permission settings
-* Removed the requirement for the calling app to hold the `READ_PHONE_STATE` permission
+* ![feat] ![sdk] Added a check to respect the system-wide location permission settings
+* ![impr] ![sdk] Removed the requirement for the calling app to hold the `READ_PHONE_STATE` permission
 
 ### 4.9.1
 
-* Improved power consumption
-* Added support for Android 4.4 Kit-Kat
-* Added support for Wi-Fi scan-only mode introduced in Android 4.3
-* The SDK will now throw an exception if the `READ_PHONE_STATE` permission is not held by the calling app
+* ![impr] ![all] Improved power consumption
+* ![feat] ![sdk] Added support for Android 4.4 Kit-Kat
+* ![feat] ![sdk] Added support for Wi-Fi scan-only mode introduced in Android 4.3
+* ![feat] ![sdk] The SDK will now throw an exception if the `READ_PHONE_STATE` permission is not held by the calling app
 
 ### 4.9.0
 
-* Introducing key-based authentication
+* ![feat] ![sdk] Introducing key-based authentication
 
 ### 4.8
 
-* Added certified location
-* Improved power consumption during geofencing
-* Two new geofence types `INSIDE` and `OUTSIDE` for cases where immediate triggering is desired
-* Fixed an edge case that could result in the client downloading extra tile data
-* Improved accuracy of location on slow scanning devices
+* ![feat] ![sdk] Added certified location
+* ![feat] ![sdk] Two new geofence types `INSIDE` and `OUTSIDE` for cases where immediate triggering is desired
+* ![opt] ![sdk] Improved power consumption during geofencing
+* ![opt] ![sdk] Fixed an edge case that could result in the client downloading extra tile data
+* ![impr] ![sdk] Improved accuracy of location on slow scanning devices
 
 ### 4.7.6
 
-* Fixed a bug that could negatively affect time to fix on some CDMA devices
+* ![fix] ![sdk] Fixed a bug that could negatively affect time to fix on some CDMA devices
 
 ### 4.7.5
 
-* Added support for location based on LTE cell towers
-* Improved the accuracy of all cell locations
-* Improved time to fix and power efficiency when using in-flight location
-* Fixed a bug in tiling when venue and tuned locations fall on different sides of a tile boundary
+* ![feat] ![sdk] Added support for location based on LTE cell towers
+* ![impr] ![sdk] Improved the accuracy of all cell locations
+* ![impr] ![sdk] Improved time to fix and power efficiency when using in-flight location
+* ![fix] ![sdk] Fixed a bug in tiling when venue and tuned locations fall on different sides of a tile boundary
 
 ### 4.7
 
-* Introduced location tuning
-* Added support for background location updates when the device is asleep
-* Added support for coarse location based on region codes (known as LACs) provided by the cell network
-* In-flight positioning fixes
+* ![feat] ![sdk] Introduced location tuning
+* ![feat] ![sdk] Added support for background location updates when the device is asleep
+* ![feat] ![sdk] Added support for coarse location based on region codes (known as LACs) provided by the cell network
+* ![fix] ![sdk] In-flight positioning fixes
 
 ### 4.6
 
-* Added in-flight positioning capabilities
-* Improvements in power consumption and accuracy for geofences
-* Enhanced indoor location for surveyed sites
-* Added offline location
+* ![feat] ![sdk] Added in-flight positioning capabilities
+* ![impr] ![sdk] Improvements in power consumption and accuracy for geofences
+* ![feat] ![sdk] Enhanced indoor location for surveyed sites
+* ![feat] ![sdk] Added offline location
 
 ### 4.5
 
@@ -455,31 +455,31 @@ Version 4.5 was never released publicly.
 
 ### 4.4
 
-* Added geofencing
-* Improved long period support
-* Improvements to positioning in remote mode
+* ![feat] ![sdk] Added geofencing
+* ![impr] ![sdk] Improved long period support
+* ![impr] ![sdk] Improvements to positioning in remote mode
 
 ### 4.3
 
-* Improved memory usage when downloading tiles
+* ![opt] ![sdk] Improved memory usage when downloading tiles
 
 ### 4.2
 
-* Added auto-registration
-* Improved offline location coverage
+* ![feat] ![sdk] Added auto-registration
+* ![impr] ![sdk] Improved offline location coverage
 
 ### 4.1
 
-* Improved first fix accuracy
-* Improved location when stationary
-* Various improvements to hybrid algorithm, particularly in tracking mode
+* ![impr] ![sdk] Improved first fix accuracy
+* ![impr] ![sdk] Improved location when stationary
+* ![impr] ![sdk] Various improvements to hybrid algorithm, particularly in tracking mode
 
 ### 4.0
 
-* Optimized power management
-* Better data and bandwidth utilization
-* Improvements to hybrid positioning
-* Inertial Navigation System
+* ![opt] ![sdk] Optimized power management
+* ![opt] ![sdk] Better data and bandwidth utilization
+* ![impr] ![sdk] Improvements to hybrid positioning
+* ![feat] ![sdk] Inertial navigation system
 
 # License
 ![License](https://img.shields.io/static/v1?label=license&message=CC-BY-ND-4.0&color=green)
@@ -487,3 +487,14 @@ Version 4.5 was never released publicly.
 Copyright (c) 2023 Qualcomm Innovation Center, Inc. All Rights Reserved.
 
 This work is licensed under the [CC BY-ND 4.0 License](https://creativecommons.org/licenses/by-nd/4.0/). See [LICENSE](LICENSE) for more details.
+
+
+[sdk]: https://img.shields.io/badge/sdk-blue
+[provider]: https://img.shields.io/badge/provider-purple
+[doc]: https://img.shields.io/badge/documentation-grey
+[all]: https://img.shields.io/badge/provider-purple?style=flat&label=sdk&labelColor=blue
+[feat]: https://img.shields.io/badge/feature-cyan
+[impr]: https://img.shields.io/badge/improvement-brightgreen
+[opt]: https://img.shields.io/badge/optimization-yellow
+[fix]: https://img.shields.io/badge/bugfix-orange
+[depr]: https://img.shields.io/badge/deprecated-red
