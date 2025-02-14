@@ -31,6 +31,17 @@ Location SDK automatically adds the following permissions to your app's manifest
 | android.permission.ACCESS_FINE_LOCATION    | Accessing GPS location for hybrid location functionality
 | android.permission.WAKE_LOCK               | Keeping processor awake when receiving background updates
 | android.permission.ACCESS_NETWORK_STATE    | Checking network connection type to optimize performance
+| android.permission.BLUETOOTH_SCAN          | Initiation of BLE scans on Android 12+
+| android.permission.BLUETOOTH               | Initiation of BLE scans on Android 11-
+| android.permission.BLUETOOTH_ADMIN         | Same as BLUETOOTH
+
+If your app does not require BLE positioning, you can remove Bluetooth-related permissions in your `AndroidManifest.xml` as follows:
+
+```xml
+    <uses-permission android:name="android.permission.BLUETOOTH" tools:node="remove"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" tools:node="remove"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" tools:node="remove"/>
+```
 
 ### Background Mode
 
@@ -80,7 +91,7 @@ import com.skyhookwireless.wps;
 
 Create an instance of [XPS](https://quic.github.io/tps-location-sdk-android/javadoc/com/skyhookwireless/wps/XPS.html) (or [WPS](https://quic.github.io/tps-location-sdk-android/javadoc/com/skyhookwireless/wps/WPS.html)) API object in the `onCreate` method of your activity or service:
 ```java
-private IWPS xps;
+private XPS xps;
 ...
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -168,13 +179,6 @@ It is highly recommended to enable [tiling mode](#enable-tiling-mode) with this 
 
 Starting with **Android Pie** the recommended minimum period for location updates is **30 seconds or longer**.
 
-### Offline location
-
-The API supports offline location that allows the application to determine the location of the device even offline and outside of tile coverage by collecting a token that can be replayed when the device is once again online. Offline tokens are only valid for 90 days after they are generated. Attempting to redeem a token more than 90 days old will result in an error.
-
-* [getOfflineToken()](https://quic.github.io/tps-location-sdk-android/javadoc/com/skyhookwireless/wps/WPS.html#getOfflineToken-com.skyhookwireless.wps.WPSAuthentication-byte:A-)
-* [getOfflineLocation()](https://quic.github.io/tps-location-sdk-android/javadoc/com/skyhookwireless/wps/WPS.html#getPeriodicLocation-com.skyhookwireless.wps.WPSAuthentication-com.skyhookwireless.wps.WPSStreetAddressLookup-boolean-long-int-com.skyhookwireless.wps.WPSPeriodicLocationCallback-)
-
 ### Abort
 
 When your app is terminating, it is recommended to cancel any ongoing operations by invoking the [abort()](https://quic.github.io/tps-location-sdk-android/javadoc/com/skyhookwireless/wps/WPS.html#abort--) method:
@@ -192,19 +196,28 @@ Check the [full API reference](https://quic.github.io/tps-location-sdk-android/j
 
 ## Logging
 
-To turn logging on, add the following code in the `onCreate()` method of your activity, service or application:
+To enable logging on SDK 5.16+, add the following code in your application:
 ```java
-SharedPreferences.Editor skyhookPrefs = getSharedPreferences("skyhook", MODE_PRIVATE).edit();
-skyhookPrefs.putBoolean("com.skyhook.wps.LogEnabled", true);
-skyhookPrefs.apply();
+xps.setTunable("LogEnabled", true);
 ```
 
 By default, the SDK will output log messages to Android logcat.
 
-If you want the SDK to write log to a file, set the following preferences:
+If you want the SDK to write log to a file, set additional tunables:
 ```java
+xps.setTunable("LogType", "BUILT_IN,FILE");  // log to a file in addition to logcat
+xps.setTunable("LogFilePath", "/sdcard/wps.log");
+```
+
+### Legacy method
+
+To enable logging on SDK versions prior to 5.16, use the legacy method based on `SharedPreferences`.
+
+Add the following code in the `onCreate()` method of your activity, service or application:
+```java
+SharedPreferences.Editor skyhookPrefs = getSharedPreferences("skyhook", MODE_PRIVATE).edit();
 skyhookPrefs.putBoolean("com.skyhook.wps.LogEnabled", true);
-skyhookPrefs.putString("com.skyhook.wps.LogType", "BUILT_IN,FILE");
+skyhookPrefs.putString("com.skyhook.wps.LogType", "BUILT_IN,FILE");  // log to a file in addition to logcat
 skyhookPrefs.putString("com.skyhook.wps.LogFilePath", "/sdcard/wpslog.txt");
 skyhookPrefs.apply();
 ```
