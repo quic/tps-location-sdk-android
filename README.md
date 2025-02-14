@@ -213,6 +213,14 @@ If you want to write the log file to external storage, make sure to obtain the `
 
 ## Changelog
 
+### 5.16.9
+
+* ![impr] ![all] Minor improvement in cell positioning accuracy
+* ![fix] ![sdk] Addressed warnings about non-SDK API usage
+* ![fix] ![sdk] Fixed exception on Android 11 or earlier if `BLUETOOTH` permission was removed
+* ![fix] ![all] Fixed performance issue with cell scanning
+* ![fix] ![all] Fixed additional stability issues
+
 ### 5.16.4
 
 * ![feat] ![all] Introduced Wi-Fi RTT positioning
